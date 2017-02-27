@@ -1,6 +1,6 @@
 import axios from 'axios'
 let api = axios.create({
-    baseURL: 'http://localhost:3000/api/',
+    baseURL: 'https://ar-ganize.herokuapp.com/api',
     timeout: 200000,
     withCredentials: true
 })
@@ -29,7 +29,7 @@ export default {
     actions: {
         login(e, p) {
             debugger
-            api.post('http://localhost:3000/login',{
+            api.post('https://ar-ganize.herokuapp.com/login',{
                 email: e,
                 password: p
             }) 
@@ -39,7 +39,7 @@ export default {
                 this.getBoards()
             }).catch(handleError)
         },
-        register(n,e,p){  api.post('http://localhost:3000/register',{
+        register(n,e,p){  api.post('https://ar-ganize.herokuapp.com/register',{
                 name: n,
                 email: e,
                 password: p
@@ -49,7 +49,7 @@ export default {
             }).catch(handleError)
         },
         authenticate(){
-            api.get('http://localhost:3000/authenticate')
+            api.get('https://ar-ganize.herokuapp.com/authenticate')
             .then(res =>{
                 if(res.data.data){
                     state.activeUser=res.data.data
@@ -59,7 +59,7 @@ export default {
 
         },
         logout(){
-            api.delete('http://localhost:3000/logout').then(res =>{
+            api.delete('https://ar-ganize.herokuapp.com/logout').then(res =>{
                 state.activeUser= {}
             })
         },
