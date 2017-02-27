@@ -1,0 +1,275 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav{
+  background: #354649;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.board {
+  width: 20vw;
+  height: 100%;
+  background: #A3C6C4;
+  margin: 35px;
+  border-radius: 10px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #354649;
+}
+.board a {
+    color: #354649;
+}
+.btn {
+  background: #354649;
+}
+.btn:hover {
+  background: #6C7A89;
+}
+.btn:focus {
+  background: #354649;
+}
+.btn-floating {
+  background: #354649;
+}
+.btn-floating:hover {
+  background: #6C7A89;
+}
+.btn-floating:focus {
+  background: #354649;
+}
+
+.flex-container{
+    width:100%;
+    display: -ms-flexbox;
+    display: flex;
+        -ms-flex-direction: row;
+            flex-direction: row;
+        -ms-flex-align: center;
+            align-items: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+}
+.list {
+        width: 20vw;
+        height: 100%;
+        background: #A3C6C4;
+        margin: 35px;
+        border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card{
+    background: #E0E7E9;
+    height: 10vh;
+    width: 18vw;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*# sourceMappingURL=app.c7b9ee1a822605d9b7c0414271b055b2.css.map*/
