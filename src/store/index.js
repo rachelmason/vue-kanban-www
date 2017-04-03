@@ -28,39 +28,39 @@ export default {
     //ACTIONS ARE RESPONSIBLE FOR MANAGING ALL ASYNC REQUESTS
     actions: {
         login(e, p) {
-            debugger
-            api.post('https://ar-ganize.herokuapp.com/login',{
-                email: e,
-                password: p
-            }) 
-            .then(res => {
-                state.activeUser = res.data.data
-                console.log(state.activeUser)
-                this.getBoards()
-            }).catch(handleError)
+            api.post('login', {
+                    email: e,
+                    password: p
+                })
+                .then(res => {
+                    state.activeUser = res.data.data
+                    console.log(state.activeUser)
+                    this.getBoards()
+                }).catch(handleError)
         },
-        register(n,e,p){  api.post('https://ar-ganize.herokuapp.com/register',{
-                name: n,
-                email: e,
-                password: p
-            }) 
-            .then(res=>{
-                this.login(e, p)
-            }).catch(handleError)
+        register(n, e, p) {
+            api.post('register', {
+                    name: n,
+                    email: e,
+                    password: p
+                })
+                .then(res => {
+                    this.login(e, p)
+                }).catch(handleError)
         },
-        authenticate(){
-            api.get('https://ar-ganize.herokuapp.com/authenticate')
-            .then(res =>{
-                if(res.data.data){
-                    state.activeUser=res.data.data
-                     this.getBoards()
-                }
-            })
+        authenticate() {
+            api.get('authenticate')
+                .then(res => {
+                    if (res.data.data) {
+                        state.activeUser = res.data.data
+                        this.getBoards()
+                    }
+                })
 
         },
-        logout(){
-            api.delete('https://ar-ganize.herokuapp.com/logout').then(res =>{
-                state.activeUser= {}
+        logout() {
+            api.delete('logout').then(res => {
+                state.activeUser = {}
             })
         },
         getBoards() {
@@ -85,9 +85,9 @@ export default {
                 .then(res => {
                     state.lists = res.data.data
                     state.lists.forEach((list, index) => {
-                        this.getListCards(list._id, index)
-                    })
-                    // console.log(state.lists)
+                            this.getListCards(list._id, index)
+                        })
+                        // console.log(state.lists)
                 })
                 .catch(handleError)
         },
@@ -159,7 +159,3 @@ export default {
 
     }
 }
-
-
-
-
