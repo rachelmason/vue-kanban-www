@@ -1,8 +1,6 @@
 <template>
   <div id="app">
     <navbar></navbar>
-    <error></error>
-   
     <router-view></router-view>
   </div>
 </template>

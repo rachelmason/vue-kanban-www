@@ -28,7 +28,8 @@ export default {
     //ACTIONS ARE RESPONSIBLE FOR MANAGING ALL ASYNC REQUESTS
     actions: {
         login(e, p) {
-            api.post('login', {
+            debugger
+            api.post('/login', {
                     email: e,
                     password: p
                 })
@@ -39,7 +40,7 @@ export default {
                 }).catch(handleError)
         },
         register(n, e, p) {
-            api.post('register', {
+            api.post('/register', {
                     name: n,
                     email: e,
                     password: p
@@ -49,7 +50,7 @@ export default {
                 }).catch(handleError)
         },
         authenticate() {
-            api.get('authenticate')
+            api.get('/authenticate')
                 .then(res => {
                     if (res.data.data) {
                         state.activeUser = res.data.data
@@ -59,7 +60,7 @@ export default {
 
         },
         logout() {
-            api.delete('logout').then(res => {
+            api.delete('/logout').then(res => {
                 state.activeUser = {}
             })
         },

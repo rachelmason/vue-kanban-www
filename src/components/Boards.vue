@@ -21,8 +21,8 @@
 
         </ul>
         </div>
-        <div v-else>
-            <h2>Please Login or register</h2>
+        <div v-else >
+            <h3 class="center">Please login or register</h3>
         </div>
     </div>
 </template>
@@ -95,6 +95,8 @@
 .btn-floating:focus{
     background:#354649;
 }
-
+.center{
+    text-align: center;
+}
 
 </style>
